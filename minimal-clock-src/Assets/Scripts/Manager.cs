@@ -13,6 +13,7 @@ public class Manager : MonoBehaviour
 
     private bool _clockActive = true;
     private bool _timerFlag;
+    private bool _fullscreenFlag = true;
     private TimerScript _timerScript;
 
     private void Start()
@@ -40,12 +41,14 @@ public class Manager : MonoBehaviour
 
         }
         
-        
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
 
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.F9))
             switchActiveScreen();
+        
+        if (Input.GetKeyDown(KeyCode.F10))
+            switchScreenMode();
     }
 
 
@@ -66,5 +69,11 @@ public class Manager : MonoBehaviour
             if (_timerFlag)
                 timerIcon.SetActive(true);
         }
+    }
+    
+    private void switchScreenMode()
+    {
+        _fullscreenFlag = !_fullscreenFlag;
+        Screen.fullScreen = _fullscreenFlag;
     }
 }
