@@ -21,10 +21,10 @@ public class TimerScript : MonoBehaviour
         if (!timerStarted)
             return;
         
-        DisplayTimeLeft(timeValue);
+        TimertimeLeft.text = DisplayTimeLeft(timeValue);
     }
 
-    private void DisplayTimeLeft(float timeLeft)
+    public string DisplayTimeLeft(float timeLeft)
     {
         if (timeLeft < 0)
             timeLeft = 0;
@@ -32,7 +32,7 @@ public class TimerScript : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeLeft / 60);
         float seconds = Mathf.FloorToInt(timeLeft % 60);
 
-        TimertimeLeft.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+       return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
     
     private void setActiveScreen()
@@ -82,5 +82,4 @@ public class TimerScript : MonoBehaviour
         timerStarted = false;
         setActiveScreen();
     }
-    
 }

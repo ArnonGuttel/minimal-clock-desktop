@@ -36,11 +36,12 @@ public class Manager : MonoBehaviour
                 _timerScript.StopTimer();
                 GetComponent<AudioSource>().Play();
                 _timerFlag = false;
-                timerIcon.SetActive(false);
             }
-
         }
-        
+
+        else
+            timerIcon.SetActive(false);
+
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
 
@@ -49,6 +50,7 @@ public class Manager : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.F10))
             switchScreenMode();
+        
     }
 
 
