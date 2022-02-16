@@ -3,3 +3,4 @@
 *.html linguist-detectable=false
 *.aspx linguist-detectable=false
 *.xml linguist-detectable=false
+*.* linguist-language=cs
