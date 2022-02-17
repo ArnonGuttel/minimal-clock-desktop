@@ -7,7 +7,7 @@
   </h1>
 <h3 align="center">  
   
-  Simple and prodctive clock program
+  Simple Minimalis & Prodctive clock program
   </h3>
   
 ## General
