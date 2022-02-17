@@ -9,12 +9,14 @@ public class Manager : MonoBehaviour
     [SerializeField] private GameObject timer;
     [SerializeField] private GameObject timerIcon;
     
+    [SerializeField] private float doubleClickTime;
     #endregion
 
     private bool _clockActive = true;
     private bool _timerFlag;
     private bool _fullscreenFlag = true;
     private TimerScript _timerScript;
+    private float _lastClickTime;
 
     private void Start()
     {
@@ -45,11 +47,17 @@ public class Manager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
 
-        if (Input.GetKeyDown(KeyCode.F9))
+        if (Input.GetKeyDown(KeyCode.F4))
             switchActiveScreen();
-        
-        if (Input.GetKeyDown(KeyCode.F10))
-            switchScreenMode();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            float timeSinceClick = Time.time - _lastClickTime;
+            if (timeSinceClick <= doubleClickTime)
+                switchScreenMode();
+            _lastClickTime = Time.time;
+        }
+            
         
     }
 
