@@ -7,13 +7,13 @@
   </h1>
 <h3 align="center">  
   
-  Simple Minimalis & Prodctive clock program
+  Simple Minimalistic & Prodctive clock program
   </h3>
   
 ## General
 
 I was looking for a nice, minimalistic clock & timer windows FULLSCREEN application for my study sessions,  
-The best that I found was a number of nice screensavers, but neither of them meets my requirements,so I just decided to build one myself.
+The best that I found was a number of nice screensavers, but neither of them meets my requirements,so I decided to build one myself.
 
 To use the program clone/download the [WindowsBuild](https://github.com/ArnonGuttel/minimalist-clock-desktop/tree/main/WindowsBuild) folder and run the minimal-clock.exe executable file
   
